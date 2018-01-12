@@ -1,10 +1,12 @@
 # Building a Twitter Bot on Hasura
 
-In this tutorial, we will create a **Twitter Bot** deployed on Hasura, which will do the following 3 tasks for a particular keyword which appears in someone's tweet:
+In this tutorial, we will create a **Twitter Bot** deployed on Hasura, which will do the following 3 tasks for a particular keyword(s) which appears in someone's tweet:
 
 * Favorite the tweet
 * Retweet the tweet
 * Follow the user who tweeted about that keyword
+
+Full code for this tutorial can be found [here](https://github.com/geekysrm/hasura-twitter-bot/)
 
 ## Pre-requisites for the tutorial
 
@@ -83,12 +85,12 @@ Check that the service named `bot` is up and running.
 
 That's it! You have created your very first Twitter bot.
 
-Now, your bot will check for recent tweets containing the keyword **'#Hasura'**.
-_(You can change the keyword you want to look for in the `telegram-bot/microservices/bot/src/server.js` file.)_
+Now, your bot will check for recent tweets about **'#Hasura'** or **'#Javascript'**.
+_(You can change the keyword(s) you want to look for in the `telegram-bot/microservices/bot/src/server.js` file.)_
 And your bot will **favorite** and **retweet** those recent tweets about that keyword; and also will **follow** the user who tweeted abut that.
 
-## Bot in Action
 
 ## Support
 
-If you happen to get stuck anywhere, feel free to raise an issue [here](https://github.com/jaisontj/hasura-fb-bot)
+If you happen to get stuck anywhere, feel free to raise an issue [here](https://github.com/geekysrm/hasura-twitter-bot/issues).
+Also, you can contact me via [email](mailto:soumyacool2012@gmail.com) or [Twitter](https://twitter.com/SoumyaRnMohanty) or [Facebook](https://www.fb.com/geekysrm).

@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 
 //Search parameters below:
 const params = { 
-  q: '#Hasura, #hasura', //write the hashtags you want to listen to
+  q: '#javascript, #Javascript, #Hasura, #hasura', //write the hashtags you want to listen to
   count: 10,             //no. of tweets to return per page
   result_type: 'recent', //we will go through the most recent tweets first
   lang: 'en'             //we are looking for english tweets only
