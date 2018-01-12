@@ -1,6 +1,7 @@
-description: A facebook messenger bot deployed on Hasura.
-keywords: bot, facebook, nodejs, express, node, javascript, messenger, messenger bot,
+description: A twitter bot deployed on Hasura.
+keywords: bot, twitter, nodejs, express, node, javascript, twitter, twitter bot,
   chatbot
 media: {}
-name: fb-bot
+name: twitter-bot
+repoUrl: https://github.com/geekysrm/hasura-twitter-bot
 platformVersion: v0.15.3
