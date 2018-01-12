@@ -86,7 +86,7 @@ Check that the service named `bot` is up and running.
 That's it! You have created your very first Twitter bot.
 
 Now, your bot will check for recent tweets about **'#Hasura'** or **'#Javascript'**.
-_(You can change the keyword(s) you want to look for in the `telegram-bot/microservices/bot/src/server.js` file.)_
+_(You can change the keyword(s) you want to look for in the_ `telegram-bot/microservices/bot/src/server.js` _file.)_
 And your bot will **favorite** and **retweet** those recent tweets about that keyword; and also will **follow** the user who tweeted abut that.
 
 
