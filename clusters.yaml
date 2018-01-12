@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: anthropomorphic99-hasura
+  data: null
+  kubeContext: anthropomorphic99
+  name: anthropomorphic99

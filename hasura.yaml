@@ -1,0 +1,6 @@
+description: A facebook messenger bot deployed on Hasura.
+keywords: bot, facebook, nodejs, express, node, javascript, messenger, messenger bot,
+  chatbot
+media: {}
+name: fb-bot
+platformVersion: v0.15.3
