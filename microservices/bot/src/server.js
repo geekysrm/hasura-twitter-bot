@@ -39,9 +39,7 @@ var favorite = function () {
           console.log('Favoriting unsuccessful!');
         }
         else {
-        const username = response.user.screen_name;
-        const favoritedId = response.id_str;
-        console.log(`Favorited this tweet: https://twitter.com/${username}/status/${favoritedId}`);
+        console.log(`Favorited !!`);
         }
       });
     });
