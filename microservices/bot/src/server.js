@@ -3,6 +3,13 @@ var CONSUMER_KEY = process.env.CONSUMER_KEY;
 var CONSUMER_SECRET = process.env.CONSUMER_SECRET;
 var ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 var ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
+var express = require('express');
+var app = express();
+
+
+app.get('/', function (req, res) {
+  res.send("Hello World, I am a Twitter bot.")
+});
 
 var Twitter = new twit({
   consumer_key: CONSUMER_KEY,
@@ -97,3 +104,8 @@ follow();
 setInterval(retweet, 60000);      /*Calling these functions every 1 minute*/
 setInterval(favorite, 60000);
 setInterval(follow, 60000);
+
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
+});
+
