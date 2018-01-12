@@ -6,11 +6,6 @@ var ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 var express = require('express');
 var app = express();
 
-
-app.get('/', function (req, res) {
-  res.send("Hello World, I am a Twitter bot.")
-});
-
 var Twitter = new twit({
   consumer_key: CONSUMER_KEY,
   consumer_secret: CONSUMER_SECRET,
@@ -18,12 +13,16 @@ var Twitter = new twit({
   access_token_secret: ACCESS_TOKEN_SECRET
 });
 
-//Search params below:
+app.get('/', function (req, res) {
+  res.send("Hello World, I am a Twitter bot deployed on Hasura. Go to: https://hasura.io/hub/project/geekysrm/twitter-bot for a detailed tutorial.")
+});
+
+//Search parameters below:
 const params = { 
-  q: '#javascript',
-  count: 10,
+  q: '#Hasura, #hasura', //write the hashtags you want to listen to
+  count: 10,             //no. of tweets to return per page
   result_type: 'recent', //we will go through the most recent tweets first
-  lang: 'en'
+  lang: 'en'             //we are looking for english tweets only
 }
 
 var favorite = function () {
@@ -41,15 +40,12 @@ var favorite = function () {
         }
         else {
         const username = response.user.screen_name;
-        const favoritedTweetId = response.id_str;
-        console.log(`Favorited: https://twitter.com/${username}/status/${favoritedTweetId}`);
+        const favoritedId = response.id_str;
+        console.log(`Favorited this tweet: https://twitter.com/${username}/status/${favoritedId}`);
         }
       });
     });
-
-    
   })
-
 }
 
 var retweet = function () {
@@ -61,7 +57,6 @@ var retweet = function () {
         id: retweetId
       }, function (err, response) {
         if (response) {
-          
           console.log('Retweet successful!');
         }
         if (err) {
@@ -87,7 +82,7 @@ var follow = function () {
           if (err) {
             console.log(err);
           } else {
-            console.log(screen_name, ': **FOLLOWED**');
+            console.log(screen_name, ': FOLLOWED');
           }
         });
       }
