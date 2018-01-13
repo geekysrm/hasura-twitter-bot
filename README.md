@@ -21,13 +21,13 @@ Full code for this tutorial can be found [here](https://github.com/geekysrm/hasu
 ### Create a twitter application
 
 * Login to your new Twitter account you made for the bot.
-* Navugate to https://apps.twitter.com/app/new
+* Navigate to https://apps.twitter.com/app/new
 * Fill out the required fields. You can leave the callback URL blank. Also fill out any valid website in your website section.
 * Click on `Create your Twitter Application`.
 
 ![Twitter app screen](https://raw.githubusercontent.com/geekysrm/hasura-twitter-bot/master/assets/twitter-1.png "twitter app screen")
 
-* Go to the `Keys and Access Tokens` section and keep a note of the four tokens/key shown i.e. Consumer Key, Consumer Secret, Access Token, Access Token Secret. 
+* Go to the `Keys and Access Tokens` tab in the next page and keep a note of the four tokens/keys shown i.e. Consumer Key, Consumer Secret, Access Token, Access Token Secret. 
 You may have to create access token and access token secret for the first time if it was not shown.
 
 ![Twitter app screen2](https://raw.githubusercontent.com/geekysrm/hasura-twitter-bot/master/assets/twitter-2.png "twitter app screen2")
@@ -87,7 +87,7 @@ That's it! You have created your very first Twitter bot.
 
 Now, your bot will check for recent tweets about **'#Hasura'** or **'#Javascript'**.
 _(You can change the keyword(s) you want to look for in the_ `telegram-bot/microservices/bot/src/server.js` _file.)_
-And your bot will **favorite** and **retweet** those recent tweets about that keyword; and also will **follow** the user who tweeted abut that.
+And your bot will **favorite** and **retweet** those recent tweets about that keyword(s); and also will **follow** the user who tweeted abut that.
 
 
 ## Support
